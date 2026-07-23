@@ -1,5 +1,6 @@
 
 #  Sistema de Gestão — Escola Dominical
+[![Acesse o sistema](https://img.shields.io/badge/Acesse%20o%20sistema-GitHub%20Pages-blue?style=for-the-badge)](https://guigit-vs.github.io/Sistema_Gestao_EBD/)
 
 ### Sistema web desenvolvido para gerenciamento de classes, alunos, frequência e indicadores da Escola Dominical.
 
@@ -138,7 +139,7 @@ Consulta por data com exibição de:
 Clone o repositório:
 
 ```bash
-git clone https://github.com/guilherme-r-medeiros/Sistema-Escola-Dominical.git
+git clone https://github.com/GuiGit-VS/Sistema_Gestao_EBD.git
 ```
 
 Abra o arquivo no navegador:
@@ -215,7 +216,7 @@ Durante o desenvolvimento, alguns desafios precisaram ser solucionados:
 
 Sugestões de melhoria e feedbacks são sempre bem-vindos.
 
-Caso identifique algum problema ou tenha alguma ideia para evolução do sistema, fique à vontade para abrir uma [Issue](https://github.com/guilherme-r-medeiros/Sistema-Escola-Dominical/issues).
+Caso identifique algum problema ou tenha alguma ideia para evolução do sistema, fique à vontade para abrir uma [Issue](https://github.com/GuiGit-VS/Sistema_Gestao_EBD/issues).
 
 ---
 
@@ -230,7 +231,7 @@ Este projeto está licenciado sob a licença MIT.
 **Guilherme Rodrigues de Medeiros**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/guilherme-rodrigues-de-medeiros-a03431348)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/guilherme-r-medeiros)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GuiGit-VS)
 
 ---
 
