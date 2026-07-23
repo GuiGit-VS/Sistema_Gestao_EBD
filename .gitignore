@@ -1,0 +1,23 @@
+# ─── Sistema Operacional ───────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── Editores e IDEs ───────────────────────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# ─── Backups gerados pelo sistema ──────────────────────────────────
+# Arquivos de backup exportados pelo próprio sistema
+backup_*.json
+
+# ─── Relatórios exportados ─────────────────────────────────────────
+# Arquivos Excel exportados localmente durante testes
+*.xlsx
+
+# ─── Logs ──────────────────────────────────────────────────────────
+*.log
