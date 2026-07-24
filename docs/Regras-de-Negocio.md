@@ -6,9 +6,9 @@
 
 **RN-01** — Cada classe deve ter um nome único, um emoji e uma cor de identificação.
 
-**RN-02** — Uma classe só pode ser excluída se não possuir alunos ativos nem chamadas registradas.
+**RN-02** — Uma classe pode ser excluída a qualquer momento. Ao confirmar a exclusão, todos os dados relacionados são removidos em cascata.
 
-**RN-03** — Ao excluir uma classe, todos os alunos inativos vinculados e todas as chamadas e frequências associadas são removidos em cascata.
+**RN-03** — Ao excluir uma classe, todos os alunos vinculados (ativos e inativos), todas as chamadas e todos os registros de frequência associados são removidos permanentemente.
 
 **RN-04** — O sistema não impõe limite de quantidade de classes.
 
@@ -80,12 +80,12 @@
 
 **RN-18** — Todos os valores de pontuação são múltiplos de 5.
 
-**RN-19** — Se o status for FALTA, os bônus ficam desabilitados e a pontuação é zerada automaticamente.
+**RN-19** — Se o status for FALTA, os bônus e o seletor de perguntas ficam desabilitados e zerados automaticamente. A pontuação permanece 0.
 
 **RN-20** — A pontuação máxima possível por aula é:
 
 ```
-15 (PRESENTE) + 20 (4 perguntas) + 5 (HARPA) + 5 (PROF.) + 5 (MÚSICO) + (SUPER) = 65 pts
+15 (PRESENTE) + 20 (4 perguntas) + 5 (HARPA) + 5 (PROF.) + 5 (MÚSICO) + 15(SUPER) = 65 pts
 ```
 
 ---
@@ -122,6 +122,7 @@ Presentes ÷ Total de alunos ativos da classe × 100
 - Classe com maior percentual de presença + total de presentes
 - Classe com maior oferta + total arrecadado no dia
 - Classe com maior número de visitantes + total de visitantes
+- Classe com mais perguntas respondidas + total de perguntas do dia
 
 ---
 

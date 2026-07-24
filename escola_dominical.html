@@ -750,7 +750,7 @@ function renderAlunos(){
       <div class="row g-2">
         <div class="col-12 col-md-5">
           <label class="flabel">Buscar</label>
-          <input class="finput" placeholder="🔍 Nome do aluno..." value="${alSearch}"
+          <input class="finput" id="al-search" placeholder="🔍 Nome do aluno..." value="${alSearch}"
             oninput="alSearch=this.value;renderAlunos()">
         </div>
         <div class="col-6 col-md-4">
@@ -824,6 +824,11 @@ function renderAlunos(){
       `}
     </div>
   `;
+  // Restaura o foco no campo de busca se o usuário estava digitando
+  if(alSearch){
+    const inp = document.getElementById("al-search");
+    if(inp){ inp.focus(); inp.setSelectionRange(inp.value.length, inp.value.length); }
+  }
 }
 
 function openNovoAluno(){
@@ -1050,7 +1055,7 @@ function renderStudentRow(r,idx){
     </div>
 
     <!-- PERGUNTAS + BÔNUS (desabilitados se FALTA) -->
-    <div style="opacity:${isFalta?0.3:1};pointer-events:${isFalta?"none":"auto"}">
+    <div id="interact-${idx}" style="opacity:${isFalta?0.3:1};pointer-events:${isFalta?"none":"auto"}">
       <!-- Perguntas -->
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap">
         <span style="font-size:11px;font-weight:800;color:var(--gray);text-transform:uppercase;letter-spacing:.4px;white-space:nowrap">Perguntas (×5pts):</span>
@@ -1099,12 +1104,12 @@ function setSt(idx,st){
         b.style.color      = k===st ? "#fff" : STATUS[k].c;
       }
     });
-    // Enable/disable bonus area
+    // Enable/disable perguntas + bonus area
     const isFalta = st==="FALTA";
-    const bonusWrap = row.querySelector('[id^="bn-"]')?.parentElement;
-    if(bonusWrap){
-      bonusWrap.style.opacity      = isFalta?"0.3":"1";
-      bonusWrap.style.pointerEvents= isFalta?"none":"auto";
+    const interactWrap = document.getElementById("interact-"+idx);
+    if(interactWrap){
+      interactWrap.style.opacity      = isFalta?"0.3":"1";
+      interactWrap.style.pointerEvents= isFalta?"none":"auto";
     }
     // If FALTA, clear bonuses and perguntas
     if(isFalta){

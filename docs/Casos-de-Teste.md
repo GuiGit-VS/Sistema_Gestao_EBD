@@ -21,7 +21,7 @@
 
 **Resultado esperado:** Classe "Jovens" aparece na lista com o emoji e a cor selecionados.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -35,7 +35,7 @@
 
 **Resultado esperado:** Sistema não salva e exibe alerta de campo obrigatório.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -50,7 +50,7 @@
 
 **Resultado esperado:** Nome da classe atualizado na lista e em todas as telas do sistema.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -64,7 +64,7 @@
 
 **Resultado esperado:** Classe removida da lista.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -77,7 +77,7 @@
 
 **Resultado esperado:** Botão exibe mensagem "Possui alunos ativos". Exclusão não é permitida.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -98,7 +98,7 @@
 
 **Resultado esperado:** Aluno "Maria Souza" aparece na lista com status "Ativo" e vinculado à classe selecionada.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -111,7 +111,7 @@
 
 **Resultado esperado:** Status do aluno muda para "Inativo". Aluno não aparece na chamada. Histórico de frequência é preservado.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -125,7 +125,7 @@
 
 **Resultado esperado:** Sistema exibe aviso com a quantidade de registros que serão apagados. Após confirmação, aluno e registros são removidos permanentemente.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -138,7 +138,7 @@
 
 **Resultado esperado:** Lista filtrada exibe apenas alunos cujo nome contém o texto digitado.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -160,7 +160,7 @@
 
 **Resultado esperado:** Chamada salva com sucesso. Mensagem de confirmação exibida.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -174,7 +174,7 @@
 
 **Resultado esperado:** Sistema exibe alerta identificando o(s) aluno(s) pendente(s). Chamada não é salva.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -188,7 +188,7 @@
 
 **Resultado esperado:** Sistema entra em modo de edição e exibe aviso de chamada já registrada.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -206,7 +206,7 @@
 
 **Cálculo:** 15 (PRESENTE) + 10 (2 perguntas) + 5 (HARPA) = 30 pts
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -220,7 +220,7 @@
 
 **Resultado esperado:** Área de bônus aparece desabilitada (opaca). Botão SUPER também desabilitado. Pontuação permanece 0.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -240,6 +240,20 @@
 
 ---
 
+### CT-15B — Verificar que perguntas são desabilitadas em FALTA
+
+**Pré-condição:** Chamada carregada.
+
+**Passos:**
+1. Selecionar status FALTA para um aluno
+2. Tentar clicar no seletor de perguntas (botões 0, 1, 2, 3, 4)
+
+**Resultado esperado:** Seletor de perguntas aparece desabilitado (opaco) junto com os bônus. Não é possível selecionar nenhuma pergunta. Pontuação permanece 0.
+
+**Status:** ✅ Passou
+
+---
+
 ## Módulo 4 — Indicadores
 
 ---
@@ -255,7 +269,90 @@
 
 **Resultado esperado:** Sistema exibe os quatro cards de destaque (presença, oferta, visitantes e perguntas respondidas) e a tabela detalhada por classe.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
+
+---
+
+### CT-16B — Verificar card de Maior % de Presença
+
+**Pré-condição:** Ao menos uma chamada registrada na data consultada.
+
+**Passos:**
+1. Consultar uma data com chamadas registradas
+2. Localizar o card "🏆 Maior % de Presença"
+
+**Resultado esperado:** Card exibe o nome da classe com maior percentual de presença. Abaixo da linha divisória, exibe o total de presentes no dia.
+
+**Status:** ✅ Passou
+
+---
+
+### CT-16C — Verificar card de Maior Oferta
+
+**Pré-condição:** Ao menos uma chamada com oferta registrada na data consultada.
+
+**Passos:**
+1. Consultar uma data com chamadas registradas
+2. Localizar o card "💰 Maior Oferta"
+
+**Resultado esperado:** Card exibe o nome da classe com maior oferta e o valor arrecadado por ela. Abaixo da linha divisória, exibe o total arrecadado por todas as classes no dia.
+
+**Status:** ✅ Passou
+
+---
+
+### CT-16D — Verificar card de Maior nº de Visitantes
+
+**Pré-condição:** Ao menos uma chamada com visitantes registrados na data consultada.
+
+**Passos:**
+1. Consultar uma data com visitantes registrados
+2. Localizar o card "🚪 Maior nº de Visitantes"
+
+**Resultado esperado:** Card exibe o nome da classe com maior número de visitantes. Abaixo da linha divisória, exibe o total de visitantes de todas as classes no dia.
+
+**Status:** ✅ Passouo
+
+---
+
+### CT-16E — Verificar card de Mais Perguntas Respondidas
+
+**Pré-condição:** Ao menos uma chamada com perguntas registradas na data consultada.
+
+**Passos:**
+1. Consultar uma data com perguntas registradas
+2. Localizar o card "📝 Mais Perguntas Respondidas"
+
+**Resultado esperado:** Card exibe o nome da classe com maior número de perguntas respondidas. Abaixo da linha divisória, exibe o total de perguntas de todas as classes no dia.
+
+**Status:** ✅ Passou
+---
+
+### CT-16F — Verificar tabela Detalhes por Classe
+
+**Pré-condição:** Ao menos uma chamada registrada na data consultada.
+
+**Passos:**
+1. Consultar uma data com chamadas registradas
+2. Localizar a tabela "Detalhes por Classe"
+
+**Resultado esperado:** Tabela exibe as colunas Classe, Pres., Alunos, Visit., Oferta e % para cada classe. Classes sem chamada naquela data aparecem com opacidade reduzida.
+
+**Status:** ✅ Passou
+
+---
+
+### CT-16G — Verificar tabela Detalhes por Aluno
+
+**Pré-condição:** Ao menos uma chamada registrada na data consultada.
+
+**Passos:**
+1. Consultar uma data com chamadas registradas
+2. Localizar a tabela "Detalhes por Aluno"
+
+**Resultado esperado:** Tabela exibe todos os alunos com status, pontuação e bônus (Harpa, Prof., Músico) para aquela data.
+
+**Status:** ✅ Passou
 
 ---
 
@@ -269,7 +366,7 @@
 
 **Resultado esperado:** Sistema exibe mensagem informando que não há chamadas nessa data.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -284,7 +381,7 @@
 
 **Resultado esperado:** O card **📝 Mais Perguntas Respondidas** exibe fundo cinza, os nomes das classes empatadas separados por " · " e a palavra "Empate" no subtítulo.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -302,7 +399,7 @@
 
 **Resultado esperado:** Arquivo `.xlsx` baixado com colunas: Data, Classe, Aluno, Situação, Presente, Perguntas, Super, Harpa, Professor, Músico, Pontuação.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -317,7 +414,7 @@
 
 **Resultado esperado:** Apenas registros do mês e classe selecionados são exibidos.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -331,7 +428,7 @@
 
 **Resultado esperado:** Pódio exibido com os 3 alunos de maior presença e os 3 de maior pontuação no período filtrado.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -350,7 +447,7 @@
 
 **Resultado esperado:** Todos os dados são restaurados exatamente como estavam antes da limpeza.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
 
 ---
 
@@ -364,7 +461,50 @@
 
 **Resultado esperado:** Arquivo de backup exportado automaticamente. Chamadas e frequências removidas. Alunos e classes mantidos.
 
-**Status:** ⬜ Não executado
+**Status:** ✅ Passou
+
+---
+
+## Módulo 7 — Gráficos
+
+### CT-24 — Verificar renderização dos gráficos
+
+**Pré-condição:** Ao menos uma chamada registrada.
+
+**Passos:**
+1. Ir para a aba "Gráficos"
+
+**Resultado esperado:** Os 6 gráficos são exibidos com dados: Presenças por Classe, Ofertas por Classe, Frequência Mensal, Ofertas Mensais, Ranking de Presença e Ranking de Pontuação.
+
+**Status:** ✅ Passou
+
+---
+
+### CT-25 — Verificar ranking de presença
+
+**Pré-condição:** Ao menos 3 alunos com presenças registradas.
+
+**Passos:**
+1. Ir para a aba "Gráficos"
+2. Localizar o gráfico "🏅 Ranking de Presença — Top 15 Alunos"
+
+**Resultado esperado:** Gráfico exibe os alunos ordenados por número de presenças, do maior para o menor, limitado a 15 alunos.
+
+**Status:** ✅ Passou
+
+---
+
+### CT-26 — Verificar ranking de pontuação
+
+**Pré-condição:** Ao menos 3 alunos com pontuação registrada.
+
+**Passos:**
+1. Ir para a aba "Gráficos"
+2. Localizar o gráfico "⭐ Ranking de Pontuação — Top 15 Alunos"
+
+**Resultado esperado:** Gráfico exibe os alunos ordenados por pontuação total acumulada, do maior para o menor, limitado a 15 alunos.
+
+**Status:** ✅ Passou
 
 ---
 
